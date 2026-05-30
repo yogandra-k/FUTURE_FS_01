@@ -376,3 +376,142 @@ footer {
 .nav-links a:hover::after {
   width: 100%;
 }
+/* ========================= */
+/* SCROLL ANIMATIONS */
+/* ========================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.section,
+.stat-box,
+.skill-card,
+.project-card,
+.experience-card,
+.timeline-card,
+.certification-card {
+  animation: fadeUp linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
+}
+
+.hero-content {
+  animation: fadeLeft 1s ease;
+}
+
+.hero-card {
+  animation: fadeRight 1s ease;
+}
+
+/* ========================= */
+/* PREMIUM HOVER EFFECTS */
+/* ========================= */
+
+.skill-card,
+.project-card,
+.experience-card,
+.timeline-card,
+.stat-box,
+.hero-card,
+.certification-card {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border 0.4s ease;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.experience-card:hover,
+.timeline-card:hover,
+.stat-box:hover,
+.hero-card:hover,
+.certification-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border: 1px solid #00c6ff;
+  box-shadow: 0 20px 45px rgba(0, 198, 255, 0.25);
+}
+
+/* ========================= */
+/* BUTTON EFFECTS */
+/* ========================= */
+
+.primary-btn,
+.secondary-btn,
+.contact-grid a {
+  transition: all 0.35s ease;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover,
+.contact-grid a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 198, 255, 0.4);
+}
+
+/* ========================= */
+/* NAVBAR UNDERLINE */
+/* ========================= */
+
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #00c6ff;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ========================= */
+/* GLOWING NAME */
+/* ========================= */
+
+.hero h1 span {
+  text-shadow:
+    0 0 10px rgba(0, 198, 255, 0.5),
+    0 0 25px rgba(0, 198, 255, 0.4),
+    0 0 40px rgba(0, 198, 255, 0.3);
+}
