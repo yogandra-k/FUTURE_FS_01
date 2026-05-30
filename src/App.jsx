@@ -1,4 +1,5 @@
 import "./App.css";
+import profilePic from "./assets/yogandra.jpg.jpeg";
 
 function App() {
   const skills = [
@@ -84,9 +85,14 @@ function App() {
         </div>
 
         <div className="hero-card">
-          <div className="profile-circle">KY</div>
-          <h3>Kalisetti Yogandra</h3>
-          <p>Full Stack Web Development Intern</p>
+  <img
+    src={profilePic}
+    alt="Kalisetti Yogandra"
+    className="profile-image"
+  />
+
+  <h3>Kalisetti Yogandra</h3>
+  <p>Full Stack Web Development Intern</p>
           <div className="mini-stats">
             <div>
               <h4>8.00</h4>
